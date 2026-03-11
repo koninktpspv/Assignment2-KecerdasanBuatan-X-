@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{datetime2}
+\usepackage{xparse}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+ 
+ \usepackage{graphicx}
+ \usepackage{titling}
+
+ \title{Sesuaikan judul assignment: Starting up the start up
+}
+% \author{Muhammad Qomaruz Zaman}
+\date{18 March 2025}
+ 
+ \usepackage{fancyhdr}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[R]{}
+    \fancyfoot[L]{}
+    \fancyhead[L]{\includegraphics[width=2cm]{ITS_pojok.pdf}}
+    \fancyhead[R]{ \DTMnow}
+}
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+    %{\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
+
+\usepackage{lipsum}  
+% \usepackage{cmbright} % Change the font by zee
+
+\begin{document}
+
+\maketitle
+
+
+\noindent\begin{tabular}{@{}ll}
+    Author(s): & First author, Second author, Third author\\
+     Teacher: &  Muhammad Qomaruz Zaman, S.T., M.T., Ph.D.\\
+     Class name: & Rangkaian Listrik 1\\
+     YouTube video link: & \url{https://youtu.be/XnGeqjbIusw?si=C58i2F8sJz37gfQx} \\
+     GitHub link: & \url{https://github.com/huggingface/datasets.git}
+\end{tabular}
+\vspace{2cm}
+
+
+Tulisan ini bisa di ganti: \lipsum[3]
+
+Tulisan ini juga: \lipsum[4]
+
+\section*{Heading lvl 2: Section}
+
+\lipsum[1][1]
+
+\subsection*{Heading lvl 3: Subsection: Untuk membuat bibliografi, silahkan edit file references.bib}
+
+
+Ini contoh untuk membuat bullets: \lipsum[1][2]
+\begin{itemize}
+    \item Item 1: \lipsum[1][3]
+    \item Item 2: \lipsum[1][4]
+\end{itemize}
+
+\lipsum[2][2]
+Kemudian ini contoh membuat numberings \begin{enumerate}
+    \item Ini contoh membuat link ke figure Citing Fig. \ref{fig:enter-label}
+    \item Ini contoh membuat link ke 1 sitasi:  Citing Ref. \cite{jones2018wireless}
+    \item Ini contoh membuat link ke 2 sitasi: Citing Refs. \cite{chen2022wireless} and \cite{jones2018wireless}
+    \item Ini contoh membuat link ke 3 sitasi: Citing Refs. \cite{chen2022wireless, jones2018wireless, lee2021machine, smith2020energy}
+    \item Ini contoh membuat link ke suatu persamaan: Citing Eq. \ref{eq:panjang dan lengkap}
+    \item Ini contoh membuat link ke suatu tabel: Citing Table \ref{tab:dummy_table}
+\end{enumerate}
+
+Dummy equation as an example:
+\begin{equation}
+\label{eq:panjang dan lengkap}
+\begin{aligned}
+\hat{y}_i &= \frac{1}{\sqrt{2\pi\sigma_i^2}} \sum_{j=1}^{N} \omega_{ij} \int_{-\infty}^{\infty} e^{-\frac{(x_j - \mu_i)^2}{2\sigma_i^2}} \nabla \cdot \left( \vec{F}_j \times \vec{A}_i \right) \, dx_j \\
+&+ \sum_{k=0}^{\infty} \frac{(-1)^k}{k!} \left( \frac{\partial}{\partial t} \right)^k \left[ \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} \right]_i \\
+&+ \lim_{n \to \infty} \sum_{m=1}^{n} \frac{1}{m^2} \left[ \frac{\Gamma(z_i)}{\zeta(s_i)} \right]^{\alpha_i} \prod_{l=1}^{M} \left( \frac{c_l}{d_l} \right)^{\beta_i} \\
+&+ \begin{cases}
+    \tilde{x}_i^2 + \dot{x}_i, & \text{if } x_i > 0 \\
+    \ddot{x}_i - \bar{x}_i, & \text{otherwise}
+  \end{cases} \\
+&+ \int_0^1 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \breve{u} \, dx \, dy \\
+&+ \sqrt[3]{\sum_{q=1}^{Q} \left( \frac{p_q}{\tilde{p}_q} \right)^{\gamma_i}} \bigoplus \left( \frac{\partial \hat{f}}{\partial \check{x}} \right)_i
+\end{aligned}
+\end{equation}
+
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ITS_pojok.pdf}
+    \caption{Caption 1: Don't forget to include caption for each figure.}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Dummy Table with Custom Formatting and Caption}
+\begin{tabular}{>{\bfseries}l c c c}
+\toprule
+\textbf{Category} & \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
+\midrule
+\textbf{Row 1} & 10 & 20 & 30 \\
+\textbf{Row 2} & 40 & 50 & 60 \\
+\textbf{Row 3} & 70 & 80 & 90 \\
+\bottomrule
+\end{tabular}
+\label{tab:dummy_table} % Add a label for referencing
+\end{table}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+
+
+\end{document}
